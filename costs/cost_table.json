@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "kind": "pdscope_cost_table",
+  "model": "Qwen3-30B-A3B BF16",
+  "platform": "NVIDIA A100 80GB PCIe + 2x Intel Xeon Gold 5318Y",
+  "native_operator": "AVX2BF16_MOE (author ktransformers CPU kernel, avx512_vbmi wheel)",
+  "workers": 48,
+  "source_runs": [
+    "r444_prepinned_calibration_20261011T042635Z",
+    "r445_long_path_calibration_20261011T043145Z"
+  ],
+  "source_sha256": [
+    "bc4591c9cad849b98521d45b6ed64afc2fd04bab80c525278d0b61eed40ff2c5",
+    "e889cd63cc850f6c0ddd7a8a4a6670c6ac9e3dccc1560a071785d18fc27b072a"
+  ],
+  "loads": [
+    1,
+    4,
+    16,
+    64,
+    128,
+    256,
+    1024,
+    4096
+  ],
+  "points": {
+    "1": {
+      "cpu_ms": 0.265018,
+      "gpu_ms": 0.24163,
+      "h2d_ms": 0.528029
+    },
+    "4": {
+      "cpu_ms": 0.380551,
+      "gpu_ms": 0.25842,
+      "h2d_ms": 0.522976
+    },
+    "16": {
+      "cpu_ms": 0.63829,
+      "gpu_ms": 0.261654,
+      "h2d_ms": 0.518573
+    },
+    "64": {
+      "cpu_ms": 1.78564,
+      "gpu_ms": 0.275096,
+      "h2d_ms": 0.513944
+    },
+    "128": {
+      "cpu_ms": 3.162429,
+      "gpu_ms": 0.286808,
+      "h2d_ms": 0.524227
+    },
+    "256": {
+      "cpu_ms": 6.144829,
+      "gpu_ms": 0.272005,
+      "h2d_ms": 0.518949
+    },
+    "1024": {
+      "cpu_ms": 23.283466,
+      "gpu_ms": 0.296284,
+      "h2d_ms": 0.502561
+    },
+    "4096": {
+      "cpu_ms": 95.309766,
+      "gpu_ms": 0.494685,
+      "h2d_ms": 0.458406
+    }
+  },
+  "scope": "per-expert completion time by routed token count: CPU-only path, resident-GPU path and H2D+GPU completion; measured on the author avx512_vbmi wheel. Recalibrate per machine. Source runs are the authors' calibration runs; only their names are kept."
+}

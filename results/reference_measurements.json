@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "kind": "pdscope_reference_measurement",
+  "measured_at": "2026-10-28",
+  "host": {
+    "gpu": "NVIDIA A100 80GB PCIe",
+    "cpu": "2x Intel Xeon Gold 5318Y (24 cores/socket)",
+    "gpu_cap_gib": 24,
+    "workers": 36,
+    "threads_per_subpool": 18
+  },
+  "config": {
+    "model": "Qwen3-30B-A3B BF16",
+    "attention": "sdpa",
+    "cache_slots": 40,
+    "speculative_slots": 128,
+    "decode_cpu_target": 6,
+    "merge": "fused",
+    "native": "dispatch",
+    "demand_slots": 4,
+    "cpu_batch": "both",
+    "dispatch": "compact",
+    "graphs": "eager_bound",
+    "copy_streams": 1,
+    "llc_prefetch": false,
+    "output_tokens": 64,
+    "repetitions": 2,
+    "expandable_segments": true,
+    "cost_table": "costs/cost_table.json"
+  },
+  "results": {
+    "512": {
+      "prefill_tokens_per_second": 343.924,
+      "decode_tokens_per_second": 7.984,
+      "end_to_end_output_tokens_per_second": 6.821,
+      "prefill_seconds": 1.493,
+      "decode_seconds": 7.891,
+      "gpu_peak_reserved_gib": 19.98,
+      "measures": 2
+    },
+    "1024": {
+      "prefill_tokens_per_second": 597.184,
+      "decode_tokens_per_second": 7.689,
+      "end_to_end_output_tokens_per_second": 6.46,
+      "prefill_seconds": 1.715,
+      "decode_seconds": 8.193,
+      "gpu_peak_reserved_gib": 20.12,
+      "measures": 2
+    },
+    "2048": {
+      "prefill_tokens_per_second": 1086.832,
+      "decode_tokens_per_second": 7.902,
+      "end_to_end_output_tokens_per_second": 6.493,
+      "prefill_seconds": 1.884,
+      "decode_seconds": 7.973,
+      "gpu_peak_reserved_gib": 20.37,
+      "measures": 2
+    },
+    "4096": {
+      "prefill_tokens_per_second": 1671.542,
+      "decode_tokens_per_second": 7.765,
+      "end_to_end_output_tokens_per_second": 6.058,
+      "prefill_seconds": 2.45,
+      "decode_seconds": 8.113,
+      "gpu_peak_reserved_gib": 20.83,
+      "measures": 2
+    }
+  },
+  "note": "Host was otherwise idle at measurement time (load average < 1). Session-to-session spread at a fixed configuration is +-5-10% for prefill and +-4% for decode; a second quiet session measured 7.83 decode tok/s at 512 input tokens."
+}

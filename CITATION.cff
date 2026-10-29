@@ -1,0 +1,77 @@
+cff-version: 1.2.0
+message: "If you use PDScope, please cite the paper."
+title: "PDScope: Breaking the Prefill-Decode Seesaw for Memory-Bound MoE Inference"
+type: software
+license: Apache-2.0
+repository-code: "https://github.com/nezha-Anonymous/PDScope"
+url: "https://github.com/nezha-Anonymous/PDScope"
+abstract: >-
+  Reference implementation of the PDScope execution engine and scheduler on top of
+  the ktransformers CPU expert kernel: phase-adaptive cross-layer scheduling, resident
+  CUDA-graph hot set, zero-copy asynchronous I/O, native decode dispatch, and the
+  measurement harness behind the single-request numbers in this repository.
+authors:
+  - family-names: Yu
+    given-names: Enda
+    affiliation: "National University of Defense Technology, Changsha, China"
+    email: yuenda@nudt.edu.cn
+  - family-names: Dong
+    given-names: Dezun
+    affiliation: "National University of Defense Technology, Changsha, China"
+    email: dong@nudt.edu.cn
+  - family-names: Zhang
+    given-names: Zhaoning
+    affiliation: "National University of Defense Technology, Changsha, China"
+    email: zhangzhaoning@nudt.edu.cn
+  - family-names: Yang
+    given-names: Xiaojian
+    affiliation: "National University of Defense Technology, Beijing, China"
+    email: yangxj@nudt.edu.cn
+  - family-names: Yang
+    given-names: Weiling
+    affiliation: "National University of Defense Technology, Changsha, China"
+    email: w.yang@nudt.edu.cn
+  - family-names: Ma
+    given-names: Shaonan
+    affiliation: "Qiyuan Laboratory, Beijing, China"
+    email: mashaonan@qiyuanlab.com
+  - family-names: Li
+    given-names: Dongsheng
+    affiliation: "National University of Defense Technology, Changsha, China"
+    email: dsli@nudt.edu.cn
+  - family-names: Wu
+    given-names: Yongwei
+    affiliation: "Qiyuan Laboratory, Beijing, China"
+    email: wuyw@tsinghua.edu.cn
+  - family-names: Liao
+    given-names: Xiangke
+    affiliation: "National University of Defense Technology, Changsha, China"
+    email: xkliao@nudt.edu.cn
+preferred-citation:
+  type: conference-paper
+  title: "PDScope: Breaking the Prefill-Decode Seesaw for Memory-Bound MoE Inference"
+  authors:
+    - family-names: Yu
+      given-names: Enda
+    - family-names: Dong
+      given-names: Dezun
+    - family-names: Zhang
+      given-names: Zhaoning
+    - family-names: Yang
+      given-names: Xiaojian
+    - family-names: Yang
+      given-names: Weiling
+    - family-names: Ma
+      given-names: Shaonan
+    - family-names: Li
+      given-names: Dongsheng
+    - family-names: Wu
+      given-names: Yongwei
+    - family-names: Liao
+      given-names: Xiangke
+  collection-title: "ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPoPP)"
+  year: 2027
+  location:
+    name: "Salt Lake City, UT, USA"
+  start-date: "2027-03-20"
+  end-date: "2027-03-24"
