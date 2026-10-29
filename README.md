@@ -5,6 +5,16 @@
 Phase-adaptive cross-layer expert scheduling for memory-bound MoE inference on CPU–GPU
 servers. Accepted at PPoPP 2027.
 
+## Paper
+
+The full paper is included in this repository:
+[**PDScope: Breaking the Prefill-Decode Seesaw for Memory-Bound MoE Inference**](docs/pdscope-ppopp27.pdf)
+(PPoPP 2027, Salt Lake City, March 20–24, 2027).
+
+This is the arXiv version we circulated before the official ACM PPoPP proceedings were
+printed. The proceedings version may differ in minor details, so cite the published paper
+when the official version is available; see [Citation](#citation).
+
 ## Overview
 
 An MoE model activates only a few experts per token, but every expert weight still has to

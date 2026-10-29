@@ -4,6 +4,14 @@
 
 面向显存受限 MoE 推理的相位自适应跨层专家调度；论文已被 PPoPP 2027 接收。
 
+## 论文
+
+完整论文已随仓库提供：
+[**PDScope: Breaking the Prefill-Decode Seesaw for Memory-Bound MoE Inference**](docs/pdscope-ppopp27.pdf)
+（PPoPP 2027，2027 年 3 月 20–24 日，美国盐湖城）。
+
+这是我们提交到 arXiv、在 ACM PPoPP 正式刊印之前的版本；正式版可能有些微小调整。等官方版本发布后，引用请以正式版为准，见[引用](#引用)。
+
 ## 概览
 
 MoE 模型每个 token 只激活少量专家，但全部专家权重都必须可达。当专家放不进显存时，它们常驻主机内存，每一层都要逐个专家决定：在 CPU 上算，还是搬进 GPU 算。Prefill 与 decode 的需求恰好相反——prefill 希望尽可能多的 token 在 GPU 上算完，decode 希望尽量少的 PCIe 传输——因此任何单一静态调度策略必然在其中一相上吃亏。
