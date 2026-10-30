@@ -5,3 +5,4 @@ native-build/
 results/local/
 *.so
 runs/
+/pdscope-artifact.zip

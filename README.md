@@ -15,6 +15,10 @@ This is the arXiv version we circulated before the official ACM PPoPP proceeding
 printed. The proceedings version may differ in minor details, so cite the published paper
 when the official version is available; see [Citation](#citation).
 
+For artifact evaluators, [`docs/AE.md`](docs/AE.md) is a self-contained guide: hardware
+requirements, a ~30-minute getting-started test, and a claim-by-claim map of what this
+repository can and cannot reproduce.
+
 ## Overview
 
 An MoE model activates only a few experts per token, but every expert weight still has to
